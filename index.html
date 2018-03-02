@@ -1,0 +1,221 @@
+---
+layout: default
+---
+
+<div class="home">
+<script src="coords.js"></script>
+<style>
+.info {
+   background: white;
+   background: rgba(255,255,255,0.8);
+   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   border-radius: 5px;
+}
+</style>
+<center><div id="map" style="width: 725px; height: 375px"></div></center>
+<center><button onclick="loadvertcrosses();">Display Vertical Cross Sections</button>
+<button onclick="loadhoricrosses();">Display Horizontal Cross Sections</button>
+<input type="button" id="mdr" style="display:none;" onclick="togglemdr()">
+<button onclick='map.setView(centerCoord);'>Center Map</button></center>
+
+<center>
+<div id="cases">
+</div>
+
+<div id="frequencies">
+</div>
+
+<div id="sliders">
+</div>
+
+<div id="images">
+</div>
+</center>
+
+</div>
+
+<script src="static/leaflet-0.7.3/leaflet.js"></script>
+<script src="js/midlat.js"></script>
+<script src="js/map.js"></script>
+<script src="js/common.js"></script>
+<script>
+function updatelatcs(){
+        var quantity = document.getElementById('latrange').value;
+        latline.setLatLngs(latarray[quantity]);
+        refreshimages(1,quantity,imageFrequency,mdrLevel);
+        document.getElementById('latLabel').value = latarray[quantity][0,0][0];
+        }
+
+function updateloncs(){
+        var quantity = document.getElementById('lonrange').value;
+        lonline.setLatLngs(lonarray[quantity]);
+        refreshimages(2,quantity,imageFrequency,mdrLevel);
+        document.getElementById('lonLabel').value = lonarray[quantity][0,0][1];
+        }
+
+function updatevertcs(){
+        var quantity = document.getElementById('vertrange').value;
+        refreshimages(3,quantity,imageFrequency,mdrLevel);
+        document.getElementById('vertLabel').value = levelListing[quantity];
+        }
+
+
+
+  function togglemdr(){
+	mdrLevel ^= true;
+	document.getElementById('mdr').value = mdrLabel[mdrLevel];
+  	if (vertImage != -1) {
+  		refreshimages(3,vertImage,imageFrequency,mdrLevel);
+  	} else if (vertImage == -1) {
+  		refreshimages(1,latImage,imageFrequency,mdrLevel);
+  		refreshimages(2,lonImage,imageFrequency,mdrLevel);
+  	}
+	}
+
+  function loadvertcrosses(){
+	if (isvertloaded) {
+		return;
+	}
+
+        displayLoading();
+	setFreqButtons();
+	setVertSlider();
+        setVertBlank();
+        resetMdr();
+
+	latline.setLatLngs(latarray[0]).addTo(map);
+	lonline.setLatLngs(lonarray[0]).addTo(map);
+  	
+  	refreshimages(1,0,0,mdrLevel);
+  	refreshimages(2,0,0,mdrLevel);
+	refreshimages(1,0,0,mdrLevel);
+
+	document.getElementById('latLabel').value = latarray[0][0,0][0];
+	document.getElementById('lonLabel').value = lonarray[0][0,0][1];    
+
+	isvertloaded = true;
+	ishoriloaded = false;
+
+        highlightLayers();
+	}
+
+  function loadhoricrosses(){
+  	if (ishoriloaded) {
+  		return;
+  	}
+
+  	displayLoading();
+        setFreqButtons();
+  	setHorSlider();
+  	setHorBlank();
+        resetMdr();
+
+  	refreshimages(3,0,0,mdrLevel);
+
+	document.getElementById('vertLabel').value = levelListing[0];
+	
+  	ishoriloaded = true;
+  	isvertloaded = false;
+  	
+  	map.removeLayer(latline);
+  	map.removeLayer(lonline);
+
+        highlightLayers();
+  	}
+  	
+  function togglefrequency(freq){
+  	for (var frequency in frequencystring) {
+    		document.getElementById(frequency).value = frequencystring[frequency];
+		}
+  	document.getElementById(freq).value += ' shown';
+  	if (vertImage != -1) {
+  		refreshimages(3,vertImage,frequencydef[freq],mdrLevel);
+  	} else if (vertImage == -1) {
+  		refreshimages(1,latImage,frequencydef[freq],mdrLevel);
+  		refreshimages(2,lonImage,frequencydef[freq],mdrLevel);
+  	}
+  	
+  	}
+
+  function refreshimages(iid,value,freq,mdr){
+	if (iid == 1) {
+		if ((value != latImage) || (freq != imageFrequency) || (mdr != mdrval)) {
+			var imagediv = document.createElement('div');
+			latImageLoc = caseDir + mdrdef[mdr] + "/lat/" + value + "/" + freq + ".png";
+			lonImageLoc = caseDir + mdrdef[mdr] + "/lon/" + lonImage + "/" + freq + ".png";
+			latIceLoc = caseDir + "lat/" + value + "/ice.png";
+			latLiquidLoc = caseDir + "lat/" + value + "/liquid.png";
+			lonIceLoc = caseDir + "lon/" + lonImage + "/ice.png";
+			lonLiquidLoc = caseDir + "lon/" + lonImage + "/liquid.png";
+			imagediv.innerHTML = "<a href=" + latImageLoc + " target='_blank'>" + 
+			"<img id='latcs1' height='200' width='400' src=" + latImageLoc + ">" + "</a>" + 
+                        "<img id='horilegend' height='200' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'>" +
+			"<a href=" + lonImageLoc + " target='_blank'>" + 
+			"<img id='loncs1' height='200' width='400' src=" + lonImageLoc + "></a><br>" + ///
+			"<a href=" + latLiquidLoc + " target='_blank'>" + 
+			"<img id='latcs1' height='200' width='400' src=" + latLiquidLoc + ">" + "</a>" + 
+                        "<img id='horilegend' height='170' width='37' src='" + caseDir + "leg/liquid.png'>" +
+			"<a href=" + lonLiquidLoc + " target='_blank'>" + 
+			"<img id='loncs1' height='200' width='400' src=" + lonLiquidLoc + "></a><br>" +
+			"<a href=" + latIceLoc + " target='_blank'>" + 
+			"<img id='latcs1' height='200' width='400' src=" + latIceLoc + ">" + "</a>" + 
+                        "<img id='horilegend' height='170' width='37' src='" + caseDir + "leg/ice.png'>" +
+			"<a href=" + lonIceLoc + " target='_blank'>" + 
+			"<img id='loncs1' height='200' width='400' src=" + lonIceLoc + "></a><br>";
+			document.getElementById('images').replaceChild(imagediv,document.getElementById('images').childNodes[0]);
+			latImage = value;
+			imageFrequency = freq;
+            mdrval = mdrdef[mdr];
+		}
+	} else if (iid == 2) {
+		if ((value != lonImage) || (freq != imageFrequency) || (mdr != mdrval)) {
+			var imagediv = document.createElement('div');
+			latImageLoc = caseDir + mdrdef[mdr] + "/lat/" + latImage + "/" + freq + ".png";
+			lonImageLoc = caseDir + mdrdef[mdr] + "/lon/" + value + "/" + freq + ".png";
+			latIceLoc = caseDir + "lat/" + latImage + "/ice.png";
+			latLiquidLoc = caseDir + "lat/" + latImage + "/liquid.png";
+			lonIceLoc = caseDir + "lon/" + value + "/ice.png";
+			lonLiquidLoc = caseDir + "lon/" + value + "/liquid.png";
+			imagediv.innerHTML = "<a href=" + latImageLoc + " target='_blank'>" + 
+			"<img id='latcs1' height='200' width='400' src=" + latImageLoc + ">" + "</a>" + 
+                        "<img id='horilegend' height='200' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'>" +
+			"<a href=" + lonImageLoc + " target='_blank'>" + 
+			"<img id='loncs1' height='200' width='400' src=" + lonImageLoc + "></a><br>" +
+			"<a href=" + latLiquidLoc + " target='_blank'>" + 
+			"<img id='latcs1' height='200' width='400' src=" + latLiquidLoc + ">" + "</a>" + 
+                        "<img id='horilegend' height='170' width='37' src='" + caseDir + "leg/liquid.png'>" +
+			"<a href=" + lonLiquidLoc + " target='_blank'>" + 
+			"<img id='loncs1' height='200' width='400' src=" + lonLiquidLoc + "></a><br>" +
+			"<a href=" + latIceLoc + " target='_blank'>" + 
+			"<img id='latcs1' height='200' width='400' src=" + latIceLoc + ">" + "</a>" + 
+                        "<img id='horilegend' height='170' width='37' src='" + caseDir + "leg/ice.png'>" +
+			"<a href=" + lonIceLoc + " target='_blank'>" + 
+			"<img id='loncs1' height='200' width='400' src=" + lonIceLoc + "></a><br>";
+			document.getElementById('images').replaceChild(imagediv,document.getElementById('images').childNodes[0]);
+			lonImage = value;
+			imageFrequency = freq;
+            mdrval = mdrdef[mdr];
+		}
+	} else if (iid == 3) {
+		if ((value != vertImage) || (freq != imageFrequency) || (mdr != mdrval)) {
+			var imagediv = document.createElement('div');
+			vertImageLoc = caseDir + mdrdef[mdr] + "/vert/" + value + "/" + freq + ".png"
+			vertLiquidLoc = caseDir + "vert/" + value + "/liquid.png";
+			vertIceLoc = caseDir + "vert/" + value + "/ice.png";
+  			imagediv.innerHTML = "<a href=" + vertImageLoc + " target='_blank'>" +
+                        "<img id='vertcs1' height='400' width='600' src=" + vertImageLoc + "></a>" + 
+                        "<img id='vertlegend' height='200' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'><br>" +
+			"<a href=" + vertLiquidLoc + " target='_blank'><img id='vertcs2' height='400' width='600' src=" + vertLiquidLoc + "></a>" +
+			"<img id='vertlegend' height='170' width='37' src='" + caseDir + "leg/liquid.png'><br>" +
+			"<a href=" + vertIceLoc + " target='_blank'><img id='vertcs3' height='400' width='600' src=" + vertIceLoc + "></a>" +
+			"<img id='vertlegend' height='170' width='37' src='" + caseDir + "leg/ice.png'><br>";
+  			document.getElementById('images').replaceChild(imagediv,document.getElementById('images').childNodes[0]);
+  			vertImage = value;
+  			imageFrequency = freq;
+            mdrval = mdrdef[mdr];
+		}
+	}
+	
+	}
+setCases();
+</script>

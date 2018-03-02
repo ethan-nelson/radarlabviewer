@@ -1,0 +1,21 @@
+# Basic settings of the site. You can change this email to yours or
+#  just comment it out.
+title: Radar Lab Viewer
+email: ethan.nelson@aos.wisc.edu
+description: An interactive radar simulator explorer.
+
+# Change this to the trailing URL you would like to access the site at
+#  (can be a single forward slash as well). This affects the templating
+#  for all site assets, including css, javascript, and images, whether
+#  you use Jekyll to serve the site or not.
+baseurl: "/radarlabviewer"
+
+# Change this to the base URL you would like to access the site at.
+#  This affects the templating for all site assets, including css, java-
+#  script, and images, whether you use Jekyll to serve the site or not.
+url: "http://ethan-nelson.github.io"
+
+# Miscellaneous settings (you can comment these out if desired)
+markdown: kramdown
+github_username: ethan-nelson/radarlabviewer
+exclude: [data]

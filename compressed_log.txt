@@ -1,0 +1,1029 @@
+commit bff35b56bd28e9b8ff08f9f6d7ea8216aa0cc616
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Sat Feb 25 15:18:18 2017 -0600
+
+    Update vendor loc in head
+
+commit ac72065e2f62501f830073e11197b715927ca2f1
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Thu Feb 23 15:16:42 2017 -0600
+
+    Add license, update readme
+
+commit 8af8b40f2b903f3186fb830cdbb404ead45ad6f4
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Thu Feb 23 14:54:02 2017 -0600
+
+    Update site config
+
+commit 5657cebd6b30c688ab1cc7adf3db6ca5f7b9df29
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Fri Feb 17 00:03:31 2017 -0600
+
+    Final js refactor of evening
+
+commit cfa561300be75cfa8371e39cbffa834654e40eb6
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Thu Feb 16 23:01:32 2017 -0600
+
+    Further js refactoring
+
+commit ff79026bbbb5d51e44fc0bf6e1a7127989a0acde
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Thu Feb 16 22:39:00 2017 -0600
+
+    Remove deprecated function arg
+
+commit bef834e5b54c0150a96c2816b34c444573904bba
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Thu Feb 16 22:31:20 2017 -0600
+
+    Continue js refactor
+
+commit ea8c15df0b91f0f3f7cec71d86929b61ce277e79
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Thu Feb 16 20:48:59 2017 -0600
+
+    Start js refactor
+
+commit 1a66ea489523b74edab29b511c350c233eac4605
+Author: Ethan Nelson <git@ethan-nelson.com>
+Date:   Thu Feb 16 20:48:40 2017 -0600
+
+    Remove xml feed
+
+commit d35674877171481828687db0ef5f1677c29da3fb
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Tue Mar 8 21:28:21 2016 -0600
+
+    update lat case
+
+commit 639ec54680263cc907ef60e6c58a000048d54723
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Tue Mar 8 21:23:17 2016 -0600
+
+    add more freq labels
+
+commit da79e021afed8c3ed73f0138cf8aba711862793f
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Tue Mar 8 21:21:11 2016 -0600
+
+    default rain layer
+
+commit 1b53637c64a87ea5df8e2c8e401ef0342dcca9a6
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Tue Mar 8 21:18:52 2016 -0600
+
+    add freq labels
+
+commit f2a6a661192b5d221e704af5688a50c171e41f18
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Tue Mar 8 21:17:19 2016 -0600
+
+    change case sliders
+
+commit 0d0062291e05d8dd6956e54b7b65d3d190b908f2
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Feb 14 19:59:32 2016 -0600
+
+    Expand vertical levels
+
+commit e50bf6e0407313dd907ff33943bb86d20fabe37a
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 13 15:23:45 2016 -0600
+
+    Add case buttons
+
+commit a8b5945c70cfbc794ee585cb509c959ebab671f0
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 13 12:47:03 2016 -0600
+
+    Show initial values
+
+commit 8c2781ef09ebfe26e89f0ff668542a1283ae88c4
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 13 11:53:08 2016 -0600
+
+    Update button text
+
+commit 330aee6c25ed80b788e05251d0df153cbcf38a7e
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Mar 4 11:51:09 2015 -0600
+
+    Update _config.yml
+
+commit 5e39bd40f53c5ddd3c3833a0324772e822d5c7fa
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Mar 4 11:49:17 2015 -0600
+
+    Update _layout.scss
+
+commit 14e896958ddb75288bf29515c53cd6af064f5a53
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Mar 4 11:46:29 2015 -0600
+
+    including footer
+
+commit 98503b79fb18e2895cee27ec0c5bb9ff498f6526
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Mar 4 11:45:43 2015 -0600
+
+    Update _config.yml
+
+commit 5f40df5e89e71c4a1cda27f786b4617190a8f449
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Mar 4 11:44:55 2015 -0600
+
+    Add footer template
+
+commit a16390f28110dab31e623d5199637e21897ff666
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Tue Feb 24 12:27:17 2015 -0600
+
+    changing button text
+
+commit c964647b3f93c15e605382b0ce98cc6f63e23fc1
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Tue Feb 24 11:11:59 2015 -0600
+
+    reducing orbits to image bounds
+
+commit 87684b446e353362243ffc6ec9bdd01a77534e43
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 23 18:55:03 2015 -0600
+
+    final image changes
+
+commit 006c4399fc71901bd2b632b7aa47f152265dd0a1
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 23 18:48:19 2015 -0600
+
+    Revert "correcting directory for lon"
+    
+    This reverts commit fd4ae24aa09118aebf4a299ddd5d1b14e03f9dcd.
+
+commit 673172fe11c81e6bd773b8274e851033fb5374a9
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 23 18:45:52 2015 -0600
+
+    correcting directory for lon
+
+commit a6db72eb1b2133287507410c263aac3ab447c4c7
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 23 18:41:14 2015 -0600
+
+    finishing figures
+    
+    changing projection and zoom levels
+
+commit b105cfcdf2e14dd5bd8a90861c4bfd16e30d10a2
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Feb 22 13:25:19 2015 -0600
+
+    including orbit coords
+
+commit 45ed7f5d5b48060612c61dfc3be0fc3f6c41fdcb
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sun Feb 22 00:14:33 2015 -0600
+
+    adding longitude orbit coordinates
+
+commit 724eb818fa5e0029160e0bf19e4295e60178cf40
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sun Feb 22 00:06:09 2015 -0600
+
+    adding latitude slice coordinates
+
+commit 2dbc03e6d136a12e738b3dea023b91c8ad38edde
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 21 23:53:21 2015 -0600
+
+    starting coordinate file for orbits
+
+commit 1c3bba2fc5ecabb178ad1f714230cf350bb4cf6b
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 21 23:40:14 2015 -0600
+
+    testing exponent frm
+
+commit f156015c28120a02affe6ba9986b50cdc2506061
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 21 22:53:55 2015 -0600
+
+    fixing stemp transparency
+
+commit 2dc9258d055666fae79bb52499deafc0d2d46c56
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 21 22:50:30 2015 -0600
+
+    adding new layers
+
+commit 3e430a6aa05f561773793de3c2e03602573ee273
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 21 22:49:13 2015 -0600
+
+    updating ignore file
+
+commit ac8d8084549b9d5b3ed5972de1eb5113ae431438
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 21 21:44:19 2015 -0600
+
+    Update index.html
+
+commit 9e1d1f111845d865c26db4b32a0b2db0d1e02f2e
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 21 21:18:20 2015 -0600
+
+    adjusting coords for new cross sections
+
+commit e1ce8a74649cff062f39aaf822ab9e10062f4e94
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Feb 20 16:49:39 2015 -0600
+
+    increasing map coverage/attribution
+
+commit d6c0d9cf10681b7410966fb6d81fe5fea8b6d389
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Feb 18 22:31:34 2015 -0600
+
+    Update index.html
+
+commit ef7c9b41204a3e821ef9091b4a0cbc1d36196971
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Wed Feb 18 22:28:24 2015 -0600
+
+    updating map tiles for better zoom
+
+commit c7456e0441bef89e70385f742d23868c798b8886
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Tue Feb 17 11:41:00 2015 -0600
+
+    increasing zoom
+
+commit b91bdbe0d7a11bfe04c00fbb3888a971d607d994
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 16 16:11:28 2015 -0600
+
+    increasing size of lat/lon windows
+
+commit 1c3600de183643f4be582528e306c1f3236c15ac
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 16 16:09:47 2015 -0600
+
+    fixing more axes
+
+commit ea88f061bb538f8b1529058e0b7c9e613166964b
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 16 15:48:56 2015 -0600
+
+    fixing slice axes
+
+commit 62518fe02a5f0dd97ca8060f0cf934b5918f7d97
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 16 15:30:02 2015 -0600
+
+    adding final ratio plots
+
+commit d9103d2e3aa0b913d1b77670c42f6ee4250c0833
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 16 15:28:39 2015 -0600
+
+    adding mixing ratio plots
+
+commit 807c9a05d626c85e1977d8812ff62d93a48c1072
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 16 15:21:53 2015 -0600
+
+    fixing mixing ratio urls
+
+commit cf3980e44beadd63df147a5d9d59523426c8624f
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 16 15:07:30 2015 -0600
+
+    adding first vertical mixing ratios
+
+commit 10b7df4976928b1bc381b62342649263efbb0731
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 14 15:52:28 2015 -0600
+
+    adding lat lon labels
+
+commit 51fdd6b92b91e4ad41f52ccedc58cd9ed2fc214f
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sat Feb 14 15:43:24 2015 -0600
+
+    spacing
+
+commit ee95e2a154c151d5c27832be61a307211ddd6ce5
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Thu Feb 12 21:45:06 2015 -0600
+
+    clarifying MDR label
+
+commit 907ff582146bbe899f2df5c3f271750dbc8038d6
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Thu Feb 12 21:21:42 2015 -0600
+
+    defaulting MDR to lower values
+
+commit cfad1125068b5689a7f1d4b16d96a14618e262c0
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Tue Feb 3 16:56:42 2015 -0600
+
+    adding orbits
+
+commit 7964788b5f9de468151f27207c75a20f574d995a
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 2 13:59:01 2015 -0600
+
+    adjusting preload more
+
+commit 4063b656c1591dd95f87a60f9415dd9122fb0bde
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 2 13:57:32 2015 -0600
+
+    adjusting preload
+
+commit c51115893b8d418d6877633dea71eaada112513e
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Feb 2 13:52:58 2015 -0600
+
+    adding mixing ratio legends
+
+commit c3713d6ace0a6372128a86471e40ef4d0d6425da
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sun Feb 1 21:27:09 2015 -0600
+
+    fixing unnecessary loads
+
+commit 7707966b78b4ffae3d945352d6a9ad7fcb995ebf
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Feb 1 21:19:57 2015 -0600
+
+    adding new lon
+
+commit 655a697b250ee8e0517687f22d388862cbae1785
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Feb 1 18:05:24 2015 -0600
+
+    new vert cs, phase imgs
+
+commit 034d3bf5a2b64cc42df24498c80079aea2a77c27
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Jan 30 12:43:40 2015 -0600
+
+    minor js changes
+
+commit c99805242159cd47a5fe030b1b9394be5173a8f4
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Jan 30 12:38:16 2015 -0600
+
+    temp legend more
+
+commit 1607f021bd07915a9c14bc03b83db31b1faa7ad7
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Jan 30 12:30:31 2015 -0600
+
+    temp legend
+
+commit 5e4400bbfb1cd4c775830093347e1dd20721a75a
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Jan 30 10:46:43 2015 -0600
+
+    more legend fixes
+
+commit 3d1b544af0761292d01574ffcc1f2d06e81cebbc
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Jan 30 10:42:40 2015 -0600
+
+    fixing legends
+
+commit 3b465806a93937e35f343975eda82ea632fd905f
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Jan 30 10:39:27 2015 -0600
+
+    adding legends
+
+commit 09f70977f9b24b296a44c0719ead62460e13f868
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Jan 29 22:23:12 2015 -0600
+
+    adding features
+
+commit 65df0e650ff85683faa202135f98c41670357976
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Jan 29 20:53:07 2015 -0600
+
+    various fixes
+
+commit 923242752d7c709991441238455790dd8519535e
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Jan 29 17:56:40 2015 -0600
+
+    slice fixes
+
+commit 1e784db04167bdb0e6155303622a77c397dd3d88
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Jan 29 15:47:05 2015 -0600
+
+    fixing mdr refresh
+
+commit ddcc3d93313ad09b993a868e654926e82bf9c48a
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Jan 29 15:08:52 2015 -0600
+
+    initial slices
+
+commit 11052f04c6b1966691eab11927fa68dd6f518eee
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Tue Jan 27 00:13:27 2015 -0600
+
+    adjusting layer opacity
+
+commit 09864d9fb770c1e3e2848270702b4597da8e3b7c
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Mon Jan 26 22:21:46 2015 -0600
+
+    converting atten to mdr
+
+commit d249cc4f40182259ef33fed89dd5bf0dc247f43e
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Mon Jan 26 20:16:59 2015 -0600
+
+    fixing z layers
+
+commit 54d8d5e86ce82f5868eb31fa8dca936b715b522b
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 17:17:49 2015 -0600
+
+    minor fixe
+
+commit 0e7ddf47f5ef5eb3bf39638548a705d4a470fd26
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 17:00:04 2015 -0600
+
+    providing map turnoff
+
+commit adc442e89aff1b9b2f4efd88c13e91c3e65121b6
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 16:30:09 2015 -0600
+
+    fixed single overlay
+
+commit d9ae2f42f1a9f8b4fe46132d8bd807fb7371ed6b
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 16:25:14 2015 -0600
+
+    layers edits
+
+commit 2f6be8d23e883771f8e5f781edcaa1d8b028a968
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 16:01:59 2015 -0600
+
+    debugging
+
+commit ec62a2ae95fc41ad4c6382e8d3e630f374ae3d41
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:53:38 2015 -0600
+
+    fixing layer transition
+
+commit 1ecef81b628083071c2b743604738ae5e4a2def3
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:50:11 2015 -0600
+
+    fixing layer transition
+
+commit 53f20484b49db5980780c1ef46de9f8a5ff110a3
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:42:12 2015 -0600
+
+    fixing layers
+
+commit 16cc1120cec62db17b9b49aae548bdfb6f3e73dc
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:32:45 2015 -0600
+
+    preventing double layers
+
+commit d0e216163f612bd40027932d70f8ad5f55b17c7b
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:29:04 2015 -0600
+
+    adjusting legend controls
+
+commit 6162cdbd76bee91f1e20bbfd28f661bd1a2958cd
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:24:38 2015 -0600
+
+    adjusting legend control
+
+commit 897901fb007e0e03a3d905378353f122bc7f376f
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:14:14 2015 -0600
+
+    reverting layer control
+
+commit 3169f819cc3af0122b18af5c1d3608f79d84c744
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:02:31 2015 -0600
+
+    more minor fixes
+
+commit 2db80b893dbc296f42747941463a993c1da783c7
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 15:00:16 2015 -0600
+
+    addl minor fixes
+
+commit c17a068d63ed6d2c1eeb131276eaf7a1eef2dbd7
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:58:36 2015 -0600
+
+    more minor fixes
+
+commit f44ddca033f72af3e681eb09db123a12c65cbd38
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:57:09 2015 -0600
+
+    more minor fixes
+
+commit ca4e18ccead9ea41d46a61d3aa6859f9cf6c1be0
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:55:02 2015 -0600
+
+    more minor fixes
+
+commit 238a9a2f366ee45e215f0a08b9bdd0a7f920f2be
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:53:10 2015 -0600
+
+    more minor fixes
+
+commit a3a6533ebe278e0687bbf3c5231707a2600f891d
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:43:14 2015 -0600
+
+    minor fixex
+
+commit 3e6c1211a2967fe2ac2df22e39679a467da16ca4
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:40:47 2015 -0600
+
+    minor fix
+
+commit 60b5142275fc7760b1c604a57139772e076a769e
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:38:25 2015 -0600
+
+    legend edits
+
+commit af28dcca68c7b9b1b666c12864383205a22e36cc
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:22:34 2015 -0600
+
+    rearranging layers
+
+commit 14001f65343f97471e76717a2fd9be5adbe6c6f0
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:21:15 2015 -0600
+
+    rearranging layers
+
+commit af5b0e5ce090e32d84a96d168c5799f2b3dc8a24
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:12:38 2015 -0600
+
+    testing z-level control more
+
+commit f7ad4608ec295d052c5a303a5e1fc0de6e087e27
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:11:38 2015 -0600
+
+    testing z-level control
+
+commit a69c714cdfd929ee39593c02449fc6b0311cbcd6
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:03:16 2015 -0600
+
+    fixing stemp img
+
+commit 5a7fda0f951cd33237dcb615bce46dd1f495c097
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:02:30 2015 -0600
+
+    fixing stemp img
+
+commit 7fb2e391ab5f2a19e192349089f11b021c7ce8da
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 14:00:58 2015 -0600
+
+    testing stemp img
+
+commit 49f167c277839464032e910c6abfc86e02efa7eb
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Mon Jan 26 13:32:55 2015 -0600
+
+    testing swind img
+
+commit ae8712e06f0c712246cf8290571e8cd4524a89d6
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Jan 23 11:09:07 2015 -0600
+
+    adding information to README
+
+commit 838de8311fc14f346db78ff4b64b894f32dd3d2e
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Jan 23 10:51:02 2015 -0600
+
+    Update index.html
+
+commit d085ca2b28f4379c5a8ea1fb7e9d5b3ada224a95
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Jan 23 10:49:51 2015 -0600
+
+    adding new overlays to remember
+
+commit bc75c96b603bf3f0e49f9ec7faff5b6e0102b021
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Wed Jan 14 16:57:51 2015 -0600
+
+    cleanup
+
+commit 7bd4babe365f977eaed5a9925dd6b882eba43acf
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Dec 28 17:53:58 2014 -0600
+
+    adding user clickable images
+
+commit 8a2780d4dca369dafde25231ddc61c49a9500b79
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Dec 28 16:31:53 2014 -0600
+
+    cleaning up
+
+commit fcd40225baac3d654be0043b6c72b6b13c0e6fd3
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Dec 28 16:31:05 2014 -0600
+
+    cleaning up
+
+commit ea5fa8c2f7acfc6927a08e6f45cc9a2e14c1a4a9
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Sun Dec 28 16:29:40 2014 -0600
+
+    images trial
+
+commit 7571e3388d6a6c079b565e8f4ae7c03a90b9a5a3
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Sat Dec 27 00:32:14 2014 -0600
+
+    changing legend style
+
+commit 40ac923a76ee8985f7434433add4b4a047c77305
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Sat Dec 27 00:14:15 2014 -0600
+
+    legend background
+
+commit 123c0d837d4fd501514f5eafc83de5d8687593bb
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Sat Dec 27 00:06:36 2014 -0600
+
+    changing legend size
+
+commit cd90a095d591db7b649baac0634e4dfbd2ea3368
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Sat Dec 27 00:05:07 2014 -0600
+
+    fixing legend src
+
+commit dd639f1e199ab822122850a028bf222e34df3269
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Sat Dec 27 00:02:33 2014 -0600
+
+    adding legend
+
+commit 59bd884e8f0ac3e6632da58a2bcb9a70d6a4b56e
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Dec 26 23:27:41 2014 -0600
+
+    updating rr
+
+commit 504dd4b2a03d1f32294c3516234f6f13dbd1695d
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 12 16:06:25 2014 -0600
+
+    adding image size in preloader
+
+commit 0216ba074d1835787eb48d3a99f2c298cd1c6eca
+Author: ethan-nelson <ethan.nelson@users.noreply.github.com>
+Date:   Fri Dec 12 15:59:22 2014 -0600
+
+    test images
+
+commit 76215d4e704042f9c7ecad228c3aeed91916a37e
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 12 15:17:00 2014 -0600
+
+    Update index.html
+
+commit 34c95da9eaa2f1f292b274095c2c23857bd4e6ac
+Author: Ethan Nelson <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 13:56:50 2014 -0600
+
+    adding lon init image
+
+commit 06b9e922230dba2b78f31e1677db5631f7f464dc
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 13:34:34 2014 -0600
+
+    preloading images
+
+commit 3c7c958085a5b303fcb672c71e44ed4c86620a92
+Author: Ethan Nelson <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 13:22:21 2014 -0600
+
+    correcting images
+
+commit 237d5142428be6394b3cbe588cb0a48565cd988f
+Author: Ethan Nelson <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 13:18:28 2014 -0600
+
+    adding test images
+
+commit 73c4ecb7e41570b49c158731bd62c958e43ce1a5
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 12:53:10 2014 -0600
+
+    Update index.html
+
+commit 708590eaa6265e27af58d38edb47f4ef9a96b353
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 12:51:48 2014 -0600
+
+    Update index.html
+
+commit 2070febbd05acac357f4235f844836a8d82b411f
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 12:50:47 2014 -0600
+
+    Update index.html
+
+commit 68acb02493033759637309d8c634381501e768ef
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 12:44:09 2014 -0600
+
+    adding frequency changes
+
+commit 99b72c93e4cad60b8ba14afdc71a179026be6fc5
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 10:55:58 2014 -0600
+
+    Update _config.yml
+
+commit 0a6e6c0c18f469eba0bf40958f7a5a0db324e45f
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 10:54:14 2014 -0600
+
+    Update index.html
+
+commit 018dc047ec6a1dc40d7f59f7796fcd18d504ac57
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 10:47:50 2014 -0600
+
+    Update index.html
+
+commit de84727d5444ecfc8625293dfbd6736597904cf8
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 10:47:17 2014 -0600
+
+    adding image refresh for lat/lon
+
+commit 9368099f450d48c2b6e053e7771c5f3b10ff98e7
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 10:42:34 2014 -0600
+
+    testing image refresh
+
+commit 11b767a0388fb8e793cdd795d6fc3ff4c7ef480d
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Wed Dec 10 10:31:33 2014 -0600
+
+    Update index.html
+
+commit 733782e00370624d61f3858dbce09cc0034caf14
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Sat Dec 6 22:58:56 2014 -0600
+
+    Update index.html
+
+commit 52a4d01256470ac10ef959f440ab63ba389e74fb
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 14:29:05 2014 -0600
+
+    Update index.html
+
+commit 21363dc49a6f3be2e8ad96824854003a160c4ec9
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 14:24:52 2014 -0600
+
+    Update index.html
+
+commit 6f4365b642de090fbc59df775207d0b19dfaa9cb
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 14:22:44 2014 -0600
+
+    Update index.html
+
+commit 3d07bc6564d0082d07707641903b036ce86047b6
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 14:20:42 2014 -0600
+
+    Update index.html
+
+commit 8caf31061ce3ef237c59ca20ee51358e9ec185d8
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 13:56:01 2014 -0600
+
+    Update index.html
+
+commit 5e05a843bb43b1ace78e456ac501f6e18de6f3f6
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 13:53:12 2014 -0600
+
+    Update index.html
+
+commit 79e8188ac3a63366f5fb328c6fda744c7979949a
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 13:50:35 2014 -0600
+
+    Update index.html
+
+commit 2ab3828c6a18b557b22cff6e1df5e95c62cb90e8
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 13:49:25 2014 -0600
+
+    adding frequency selectors
+
+commit ff51d2653578619451a8016cc79a9646814d4ca3
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 13:37:27 2014 -0600
+
+    updating image
+
+commit 467c53ad34295cdb7eb544c27882ec9894de1e85
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 13:30:06 2014 -0600
+
+    Update index.html
+
+commit b1397afff0c92d969238c324fdd39fd4850dd869
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:56:01 2014 -0600
+
+    Update index.html
+
+commit 24ce7386b4c78904ac5cace7e1a72b9037c09451
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:54:38 2014 -0600
+
+    Update index.html
+
+commit 57dd37b8b9c98670049da0d5af69a79b3019082d
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:51:13 2014 -0600
+
+    adding legend
+
+commit 4ca14ecee03cc2d9934edfaef1fa0f42a19811dc
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:39:33 2014 -0600
+
+    Update index.html
+
+commit e80b39a09b364dc30e8c9cae166939151c0c696a
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:37:52 2014 -0600
+
+    Update index.html
+
+commit 0f9f6f6c682c50db9add712f407b73df69b50d21
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:36:22 2014 -0600
+
+    Update index.html
+
+commit b298816f455bf3ef7dfbe2fd5d4b01fd88b09724
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:35:09 2014 -0600
+
+    Update index.html
+
+commit 873016c200203c6fc9960da75a82a8c9066aa904
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:33:47 2014 -0600
+
+    Update index.html
+
+commit 7c5813d52c538b39e336c1c410fcc96ea2f297c4
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:32:28 2014 -0600
+
+    Update index.html
+
+commit d561accb7fd26b2f2649e5e5e0c42901c2ece73c
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:26:00 2014 -0600
+
+    Update index.html
+
+commit 81fc68d178c6d919a64de27b1d7939e430f8ce8e
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 12:25:37 2014 -0600
+
+    adding layers
+
+commit 00499d4e7975ad9813d88f2b3fa339f92018d77d
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 11:54:42 2014 -0600
+
+    fixing attenuation bugs
+
+commit 9419136be9b175f4225bf1f1ca9e4a11f5a24052
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 11:52:20 2014 -0600
+
+    Update index.html
+
+commit 5e676100aaa66045140161164b5a1d7ba95ae7af
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 11:52:06 2014 -0600
+
+    Update index.html
+
+commit c4d33c60262b96038584eae421c325d8769d7edb
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 11:50:05 2014 -0600
+
+    Update index.html
+
+commit 259f1b8aa00db3d3874660abbeb3849f984b6011
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 11:26:42 2014 -0600
+
+    extra curly bracket
+
+commit ce35c167aaf2cf4c023353af14f150abf24dff3b
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 11:25:23 2014 -0600
+
+    Update index.html
+
+commit 42b09325d1f5545c0bad43308ce4d975408f8b5b
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 11:23:20 2014 -0600
+
+    Update index.html
+
+commit c4884dd0fdcc5c9d352a62f140afa3116218da40
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 10:19:45 2014 -0600
+
+    adding vertical cross section capability
+
+commit 7e3b0a62767b6f245b6ab21840399740f350a654
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 10:12:16 2014 -0600
+
+    Update index.html
+
+commit 7833b604ff8848fa008e9848b866eeb4c13ce556
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Fri Dec 5 10:09:49 2014 -0600
+
+    Update index.html
+
+commit b0e8323fe0bfe955c41d562dce843a97863553a4
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Dec 4 20:07:37 2014 -0600
+
+    rearranging
+
+commit a46a9b0aa0a70ca30b0f2e403f7be3f0dcb12da8
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Dec 4 19:59:56 2014 -0600
+
+    fixing config
+
+commit 5530523e8a21d3ddf1f037f20e9c981617fb484b
+Author: ethan-nelson <ethan-nelson@users.noreply.github.com>
+Date:   Thu Dec 4 19:54:39 2014 -0600
+
+    initial build
+
+commit 832698660c7c02604a7d961b40cdfd9b8c39afc0
+Author: Ethan <ethan-nelson@users.noreply.github.com>
+Date:   Thu Dec 4 13:20:10 2014 -0600
+
+    Initial commit

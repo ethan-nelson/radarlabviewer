@@ -1,0 +1,10 @@
+*.*~
+.sass-cache/*
+.sass-cache
+.sass-cache/*/*
+_site/*
+*.sh
+.DS_Store
+*.swp
+*.py[oc]
+*.h5
