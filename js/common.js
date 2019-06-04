@@ -1,6 +1,6 @@
 var frequencystring={};
-frequencystring['sbutton'] = 'S band (10 GHz)';
-frequencystring['kubutton'] = 'Ku band (14 GHz)';
+frequencystring['sbutton'] = 'S band (3 GHz)';
+frequencystring['kubutton'] = 'Ku band (13 GHz)';
 frequencystring['kabutton'] = 'Ka band (35 GHz)';
 frequencystring['wbutton'] = 'W band (94 GHz)';
 
@@ -11,10 +11,14 @@ frequencydef['kabutton'] = 3;
 frequencydef['wbutton'] = 4;
 
 var mdrLabel=[ "Improved mission MDR shown", "Current mission MDR shown"];
-
 var mdrdef={};
 mdrdef[1] = 'h';
 mdrdef[0] = 'l';
+
+var attLabel=[ "Attenuated", "No attenuation" ];
+var attdef={};
+attdef[1] = '0';
+attdef[0] = '1';
 
 var levelListing = {};
 levelListing[0] = " 1.5 km";
@@ -38,8 +42,10 @@ var vertImage = -1;
 var imageFrequency = 0;
 
 var mdrval = 0;
-
 var mdrLevel = 0;
+
+var attval = 0;
+var attLevel = 0;
 
 function setCases() {
     var casediv = document.createElement('div');
@@ -63,6 +69,12 @@ function resetMdr() {
     document.getElementById('mdr').value = mdrLabel[0];
 };
 
+function resetAtt() {
+    attLevel = 0;
+
+    document.getElementById('att').style.display = "";
+    document.getElementById('att').value = attLabel[0];
+};
 
 function displayLoading() {
     var loadingdiv = document.createElement('div');
@@ -129,7 +141,7 @@ function setVertSlider() {
     for (i=0; i < 2; i++) {
         sliderdiv.innerHTML += "<label for='" + values[i][0] + "'>" + values[i][1] +
                                "</label><input id='" + values[i][0] + "' type='range' " +
-                               "min='0' max='6' value='0' onmousemove='" + values[i][2] +
+                               "min='0' max='5' value='0' onmousemove='" + values[i][2] +
                                "' onchange='" + values[i][2] + "'><input type='text' id='" +
                                values[i][3] + "' size='6' value='' readonly='true'>"
     };

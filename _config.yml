@@ -1,8 +1,6 @@
 # Basic settings of the site. You can change this email to yours or
 #  just comment it out.
 title: Radar Lab Viewer
-email: ethan.nelson@aos.wisc.edu
-description: An interactive radar simulator explorer.
 
 # Change this to the trailing URL you would like to access the site at
 #  (can be a single forward slash as well). This affects the templating

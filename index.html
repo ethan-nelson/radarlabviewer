@@ -16,7 +16,8 @@ layout: default
 <center><button onclick="loadvertcrosses();">Display Vertical Cross Sections</button>
 <button onclick="loadhoricrosses();">Display Horizontal Cross Sections</button>
 <input type="button" id="mdr" style="display:none;" onclick="togglemdr()">
-<button onclick='map.setView(centerCoord);'>Center Map</button></center>
+<!--<button onclick='map.setView(centerCoord);'>Center Map</button></center>-->
+<input type="button" id="att" style="display:none;" onclick="toggleatt()">
 
 <center>
 <div id="cases">
@@ -42,20 +43,20 @@ layout: default
 function updatelatcs(){
         var quantity = document.getElementById('latrange').value;
         latline.setLatLngs(latarray[quantity]);
-        refreshimages(1,quantity,imageFrequency,mdrLevel);
+        refreshimages(1,quantity,imageFrequency,mdrLevel,attLevel);
         document.getElementById('latLabel').value = latarray[quantity][0,0][0];
         }
 
 function updateloncs(){
         var quantity = document.getElementById('lonrange').value;
         lonline.setLatLngs(lonarray[quantity]);
-        refreshimages(2,quantity,imageFrequency,mdrLevel);
+        refreshimages(2,quantity,imageFrequency,mdrLevel,attLevel);
         document.getElementById('lonLabel').value = lonarray[quantity][0,0][1];
         }
 
 function updatevertcs(){
         var quantity = document.getElementById('vertrange').value;
-        refreshimages(3,quantity,imageFrequency,mdrLevel);
+        refreshimages(3,quantity,imageFrequency,mdrLevel,attLevel);
         document.getElementById('vertLabel').value = levelListing[quantity];
         }
 
@@ -65,12 +66,23 @@ function updatevertcs(){
 	mdrLevel ^= true;
 	document.getElementById('mdr').value = mdrLabel[mdrLevel];
   	if (vertImage != -1) {
-  		refreshimages(3,vertImage,imageFrequency,mdrLevel);
+  		refreshimages(3,vertImage,imageFrequency,mdrLevel,attLevel);
   	} else if (vertImage == -1) {
-  		refreshimages(1,latImage,imageFrequency,mdrLevel);
-  		refreshimages(2,lonImage,imageFrequency,mdrLevel);
+  		refreshimages(1,latImage,imageFrequency,mdrLevel,attLevel);
+  		refreshimages(2,lonImage,imageFrequency,mdrLevel,attLevel);
   	}
 	}
+
+function toggleatt(){
+    attLevel ^= true;
+    document.getElementById('att').value = attLabel[attLevel];
+    if (vertImage != -1) {
+        refreshimages(3,vertImage,imageFrequency,mdrLevel,attLevel);
+    } else if (vertImage == -1) {
+        refreshimages(1,latImage,imageFrequency,mdrLevel,attLevel);
+        refreshimages(2,lonImage,imageFrequency,mdrLevel,attLevel);
+    }
+}
 
   function loadvertcrosses(){
 	if (isvertloaded) {
@@ -82,13 +94,14 @@ function updatevertcs(){
 	setVertSlider();
         setVertBlank();
         resetMdr();
+        resetAtt();
 
 	latline.setLatLngs(latarray[0]).addTo(map);
 	lonline.setLatLngs(lonarray[0]).addTo(map);
   	
-  	refreshimages(1,0,0,mdrLevel);
-  	refreshimages(2,0,0,mdrLevel);
-	refreshimages(1,0,0,mdrLevel);
+  	refreshimages(1,0,0,mdrLevel,attLevel);
+  	refreshimages(2,0,0,mdrLevel,attLevel);
+	refreshimages(1,0,0,mdrLevel,attLevel);
 
 	document.getElementById('latLabel').value = latarray[0][0,0][0];
 	document.getElementById('lonLabel').value = lonarray[0][0,0][1];    
@@ -109,8 +122,9 @@ function updatevertcs(){
   	setHorSlider();
   	setHorBlank();
         resetMdr();
+        resetAtt();
 
-  	refreshimages(3,0,0,mdrLevel);
+  	refreshimages(3,0,0,mdrLevel,attLevel);
 
 	document.getElementById('vertLabel').value = levelListing[0];
 	
@@ -129,27 +143,27 @@ function updatevertcs(){
 		}
   	document.getElementById(freq).value += ' shown';
   	if (vertImage != -1) {
-  		refreshimages(3,vertImage,frequencydef[freq],mdrLevel);
+  		refreshimages(3,vertImage,frequencydef[freq],mdrLevel,attLevel);
   	} else if (vertImage == -1) {
-  		refreshimages(1,latImage,frequencydef[freq],mdrLevel);
-  		refreshimages(2,lonImage,frequencydef[freq],mdrLevel);
+  		refreshimages(1,latImage,frequencydef[freq],mdrLevel,attLevel);
+  		refreshimages(2,lonImage,frequencydef[freq],mdrLevel,attLevel);
   	}
   	
   	}
 
-  function refreshimages(iid,value,freq,mdr){
+  function refreshimages(iid,value,freq,mdr,att){
 	if (iid == 1) {
-		if ((value != latImage) || (freq != imageFrequency) || (mdr != mdrval)) {
+		if ((value != latImage) || (freq != imageFrequency) || (mdr != mdrval) || (att != attval)) {
 			var imagediv = document.createElement('div');
-			latImageLoc = caseDir + mdrdef[mdr] + "/lat/" + value + "/" + freq + ".png";
-			lonImageLoc = caseDir + mdrdef[mdr] + "/lon/" + lonImage + "/" + freq + ".png";
+			latImageLoc = caseDir + mdrdef[mdr] + "/lat/" + value + "/" + freq + "-" + att + ".png";
+			lonImageLoc = caseDir + mdrdef[mdr] + "/lon/" + lonImage + "/" + freq + "-" + att + ".png";
 			latIceLoc = caseDir + "lat/" + value + "/ice.png";
 			latLiquidLoc = caseDir + "lat/" + value + "/liquid.png";
 			lonIceLoc = caseDir + "lon/" + lonImage + "/ice.png";
 			lonLiquidLoc = caseDir + "lon/" + lonImage + "/liquid.png";
 			imagediv.innerHTML = "<a href=" + latImageLoc + " target='_blank'>" + 
 			"<img id='latcs1' height='200' width='400' src=" + latImageLoc + ">" + "</a>" + 
-                        "<img id='horilegend' height='200' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'>" +
+                        "<img id='horilegend' height='170' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'>" +
 			"<a href=" + lonImageLoc + " target='_blank'>" + 
 			"<img id='loncs1' height='200' width='400' src=" + lonImageLoc + "></a><br>" + ///
 			"<a href=" + latLiquidLoc + " target='_blank'>" + 
@@ -166,19 +180,20 @@ function updatevertcs(){
 			latImage = value;
 			imageFrequency = freq;
             mdrval = mdrdef[mdr];
+            attval = attdef[att];
 		}
 	} else if (iid == 2) {
-		if ((value != lonImage) || (freq != imageFrequency) || (mdr != mdrval)) {
+		if ((value != lonImage) || (freq != imageFrequency) || (mdr != mdrval) || (att != attval)) {
 			var imagediv = document.createElement('div');
-			latImageLoc = caseDir + mdrdef[mdr] + "/lat/" + latImage + "/" + freq + ".png";
-			lonImageLoc = caseDir + mdrdef[mdr] + "/lon/" + value + "/" + freq + ".png";
+			latImageLoc = caseDir + mdrdef[mdr] + "/lat/" + latImage + "/" + freq + "-" + att + ".png";
+			lonImageLoc = caseDir + mdrdef[mdr] + "/lon/" + value + "/" + freq + "-" + att + ".png";
 			latIceLoc = caseDir + "lat/" + latImage + "/ice.png";
 			latLiquidLoc = caseDir + "lat/" + latImage + "/liquid.png";
 			lonIceLoc = caseDir + "lon/" + value + "/ice.png";
 			lonLiquidLoc = caseDir + "lon/" + value + "/liquid.png";
 			imagediv.innerHTML = "<a href=" + latImageLoc + " target='_blank'>" + 
 			"<img id='latcs1' height='200' width='400' src=" + latImageLoc + ">" + "</a>" + 
-                        "<img id='horilegend' height='200' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'>" +
+                        "<img id='horilegend' height='170' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'>" +
 			"<a href=" + lonImageLoc + " target='_blank'>" + 
 			"<img id='loncs1' height='200' width='400' src=" + lonImageLoc + "></a><br>" +
 			"<a href=" + latLiquidLoc + " target='_blank'>" + 
@@ -195,16 +210,17 @@ function updatevertcs(){
 			lonImage = value;
 			imageFrequency = freq;
             mdrval = mdrdef[mdr];
+            attval = attdef[att];
 		}
 	} else if (iid == 3) {
-		if ((value != vertImage) || (freq != imageFrequency) || (mdr != mdrval)) {
+		if ((value != vertImage) || (freq != imageFrequency) || (mdr != mdrval) || (att != attval)) {
 			var imagediv = document.createElement('div');
-			vertImageLoc = caseDir + mdrdef[mdr] + "/vert/" + value + "/" + freq + ".png"
+			vertImageLoc = caseDir + mdrdef[mdr] + "/vert/" + value + "/" + freq + "-" + att + ".png"
 			vertLiquidLoc = caseDir + "vert/" + value + "/liquid.png";
 			vertIceLoc = caseDir + "vert/" + value + "/ice.png";
   			imagediv.innerHTML = "<a href=" + vertImageLoc + " target='_blank'>" +
                         "<img id='vertcs1' height='400' width='600' src=" + vertImageLoc + "></a>" + 
-                        "<img id='vertlegend' height='200' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'><br>" +
+                        "<img id='vertlegend' height='170' width='37' src='" + caseDir + mdrdef[mdr] + "/leg/" + freq + ".png'><br>" +
 			"<a href=" + vertLiquidLoc + " target='_blank'><img id='vertcs2' height='400' width='600' src=" + vertLiquidLoc + "></a>" +
 			"<img id='vertlegend' height='170' width='37' src='" + caseDir + "leg/liquid.png'><br>" +
 			"<a href=" + vertIceLoc + " target='_blank'><img id='vertcs3' height='400' width='600' src=" + vertIceLoc + "></a>" +
@@ -213,6 +229,7 @@ function updatevertcs(){
   			vertImage = value;
   			imageFrequency = freq;
             mdrval = mdrdef[mdr];
+            attval = attdef[att];
 		}
 	}
 	

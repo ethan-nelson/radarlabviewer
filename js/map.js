@@ -4,7 +4,7 @@ var mapimg = L.tileLayer(
     {
         maxZoom: 7,
         minZoom: 0,
-        attribution: '<a href="javascript:attribution()">Map Attributions</a>'
+        attribution: '<a href="javascript:attribution()">Map Data: (c) OpenStreetMap Contributors; Map Style: (c) Mapbox; Model Data: S. van den Heever and A. Igel</a>'
     }
 );
 
@@ -19,7 +19,8 @@ function attribution() {
 overlays["Map"] = mapimg;
 
 var map = L.map('map', {
-    layers: [mapimg, rrimg] })
+    layers: [mapimg, rrimg],
+    maxBounds: [[20,-130],[50,-45]] })
     .setView(centerCoord, initialZoom);
 rlegend.addTo(map)
 L.control.layers(mainLayers, overlays).addTo(map);

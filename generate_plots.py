@@ -126,13 +126,15 @@ def plot_colorbar(colormap, vmin, vmax, pmin, label, figname, log=False, big=Fal
 # Define arrays and dictionaries of information as well as file names
 basedir = 'data/quickbeam_%s-MLAT-a-A-2009-04-10-030000-g2.h5'
 frequencies = ['S','Ku','Ka','W']
-frequency_values = {'Ku': '13','Ka': '35','W': '94','S': '10'}
+frequency_values = {'Ku': '13','Ka': '35','W': '94','S': '3'}
+reflectivities = ['Z_cor','Z_eff']
 
 range_current = {'Ku': [18, 50], 'Ka': [12, 50], 'W': [-30, 50], 'S': [0, 50]}
 range_future = {'Ku': [0, 50], 'Ka': [0, 50], 'W': [-30, 50], 'S': [0, 50]}
 range_ref = [-30, 50]
 range_model = {'ice': [1E-4, 2], 'liquid': [1E-4, 2], 'tempk': [28, 90], 'pcprate': [0.01, 100]}
 model_title = {'ice': 'Ice Water Content', 'liquid': 'Liquid Water Content', 'tempk': 'Temperature', 'pcprate': 'Rainfall'}
+model_title_cb = {'ice': 'Ice Water Content [g/kg]', 'liquid': 'Liquid Water Content [g/kg]', 'tempk': 'Temperature [F]', 'pcprate': 'Rainfall [mm/hr]'}
 
 lon_sections = [229, 302, 361, 434, 507, 580]
 lon_sections = range(220,580)
@@ -176,29 +178,30 @@ cmap.set_under('w')
 for ifreq,frequency in enumerate(frequencies):
     reftitle = '%s %s GHz Reflectivity' % (frequency, frequency_values[frequency])
     refctitle = 'Reflectivity [dBZ]'
-    radar_data = quickbeam.read(basedir % frequency.lower(), 'Z_cor', 'lon', 'lat', 'hgt')
+    radar_data = quickbeam.read(basedir % frequency.lower(), 'Z_cor', 'Z_eff', 'lon', 'lat', 'hgt')
 
-    for isec,section in enumerate(lon_sections):
-        plot_cross_section(model_data['lat'][:,:,section], model_data['heights'][:,:,section], radar_data['Z_cor'][:,:,section], range_current[frequency], range_ref, cmap, reftitle, 'h/lon/%i/%i' % (isec,ifreq+1), 'lon')
-        plot_cross_section(model_data['lat'][:,:,section], model_data['heights'][:,:,section], radar_data['Z_cor'][:,:,section], range_future[frequency], range_ref, cmap, reftitle, 'l/lon/%i/%i' % (isec,ifreq+1),  'lon')
+    for iref,ref in enumerate(reflectivities):
+        for isec,section in enumerate(lon_sections):
+            plot_cross_section(model_data['lat'][:,:,section], model_data['heights'][:,:,section], radar_data[ref][:,:,section], range_current[frequency], range_ref, cmap, reftitle, 'h/lon/%i/%i-%i' % (isec,ifreq+1,iref), 'lon')
+            plot_cross_section(model_data['lat'][:,:,section], model_data['heights'][:,:,section], radar_data[ref][:,:,section], range_future[frequency], range_ref, cmap, reftitle, 'l/lon/%i/%i-%i' % (isec,ifreq+1,iref),  'lon')
 
-    for isec,section in enumerate(lat_sections):
-        plot_cross_section(model_data['lon'][:,section,:], model_data['heights'][:,section,:], radar_data['Z_cor'][:,section,:], range_current[frequency], range_ref, cmap, reftitle, 'h/lat/%i/%i' % (isec,ifreq+1), 'lat')
-        plot_cross_section(model_data['lon'][:,section,:], model_data['heights'][:,section,:], radar_data['Z_cor'][:,section,:], range_future[frequency], range_ref, cmap, reftitle, 'l/lat/%i/%i' % (isec,ifreq+1), 'lat')
+        for isec,section in enumerate(lat_sections):
+            plot_cross_section(model_data['lon'][:,section,:], model_data['heights'][:,section,:], radar_data[ref][:,section,:], range_current[frequency], range_ref, cmap, reftitle, 'h/lat/%i/%i-%i' % (isec,ifreq+1,iref), 'lat')
+            plot_cross_section(model_data['lon'][:,section,:], model_data['heights'][:,section,:], radar_data[ref][:,section,:], range_future[frequency], range_ref, cmap, reftitle, 'l/lat/%i/%i-%i' % (isec,ifreq+1,iref), 'lat')
 
-    for isec,section in enumerate(hgt_sections):
-        shapes = np.shape(radar_data['lon'])
-        temp = np.zeros(shapes)
-        # We find nearest point to a given geometric height level
-        for i in range(shapes[0]):
-            for j in range(shapes[1]):
-                lev = np.argmin([np.abs(section - x) for x in model_data['heights'][:,i,j]])
-                temp[i,j] = radar_data['Z_cor'][lev,i,j]
-        plot_cross_section(radar_data['lon'], radar_data['lat'], temp, range_current[frequency], range_ref, cmap, reftitle, 'h/vert/%i/%i' % (isec,ifreq+1), 'hgt')
-        plot_cross_section(radar_data['lon'], radar_data['lat'], temp, range_future[frequency], range_ref, cmap, reftitle, 'l/vert/%i/%i' % (isec,ifreq+1), 'hgt')
+        for isec,section in enumerate(hgt_sections):
+            shapes = np.shape(radar_data['lon'])
+            temp = np.zeros(shapes)
+            # We find nearest point to a given geometric height level
+            for i in range(shapes[0]):
+                for j in range(shapes[1]):
+                    lev = np.argmin([np.abs(section - x) for x in model_data['heights'][:,i,j]])
+                    temp[i,j] = radar_data[ref][lev,i,j]
+            plot_cross_section(radar_data['lon'], radar_data['lat'], temp, range_current[frequency], range_ref, cmap, reftitle, 'h/vert/%i/%i-%i' % (isec,ifreq+1,iref), 'hgt')
+            plot_cross_section(radar_data['lon'], radar_data['lat'], temp, range_future[frequency], range_ref, cmap, reftitle, 'l/vert/%i/%i-%i' % (isec,ifreq+1,iref), 'hgt')
 
-    plot_colorbar('jet', range_current[frequency][0], range_current[frequency][1], -30, 'Reflectivity [dBZ]', 'h/leg/%i' % (ifreq+1))
-    plot_colorbar('jet', range_future[frequency][0], range_future[frequency][1], -30, 'Reflectivity [dBZ]', 'l/leg/%i' % (ifreq+1))
+    plot_colorbar('jet', range_current[frequency][0], range_current[frequency][1], -30, 'Reflectivity [dBZ]', 'h/leg/%i' % (ifreq+1), big=True)
+    plot_colorbar('jet', range_future[frequency][0], range_future[frequency][1], -30, 'Reflectivity [dBZ]', 'l/leg/%i' % (ifreq+1), big=True)
 
 # Plot model cross sections
 for variable in model_plot_variables:
@@ -218,7 +221,7 @@ for variable in model_plot_variables:
                 temp[i,j] = model_data[variable][lev,i,j]
         plot_cross_section(model_data['lon'][0,:,:], model_data['lat'][0,:,:], temp, range_model[variable], range_model[variable], cmap, model_title[variable], 'vert/%i/%s' % (isec, variable), 'hgt')
 
-    plot_colorbar('jet', range_model[variable][0], range_model[variable][1], range_model[variable][0], model_title[variable], 'leg/%s' % variable)
+    plot_colorbar('jet', range_model[variable][0], range_model[variable][1], range_model[variable][0], model_title_cb[variable], 'leg/%s' % variable, big=True)
 
 # Write out orbits for map
 f = open('coords.js', 'w')

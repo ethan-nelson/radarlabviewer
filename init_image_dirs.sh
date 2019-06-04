@@ -30,10 +30,14 @@ do
   mkdir -p images/l/lat/${i}
   mkdir -p images/l/lon/${i}
 
-  cp images/transparent.png images/h/lat/${i}/0.png
-  cp images/transparent.png images/h/lon/${i}/0.png
-  cp images/transparent.png images/l/lat/${i}/0.png
-  cp images/transparent.png images/l/lon/${i}/0.png
+  cp images/transparent.png images/h/lat/${i}/0-0.png
+  cp images/transparent.png images/h/lat/${i}/0-1.png
+  cp images/transparent.png images/h/lon/${i}/0-0.png
+  cp images/transparent.png images/h/lon/${i}/0-1.png
+  cp images/transparent.png images/l/lat/${i}/0-0.png
+  cp images/transparent.png images/l/lat/${i}/0-1.png
+  cp images/transparent.png images/l/lon/${i}/0-0.png
+  cp images/transparent.png images/l/lon/${i}/0-1.png
 done
 
 # Reflectivity planar cross sections
@@ -42,13 +46,17 @@ do
   mkdir -p images/h/vert/${i}
   mkdir -p images/l/vert/${i}
 
-  cp images/transparent.png images/h/vert/${i}/0.png
-  cp images/transparent.png images/l/vert/${i}/0.png
+  cp images/transparent.png images/h/vert/${i}/0-0.png
+  cp images/transparent.png images/h/vert/${i}/0-1.png
+  cp images/transparent.png images/l/vert/${i}/0-0.png
+  cp images/transparent.png images/l/vert/${i}/0-1.png
 done
 
 # Reflectivity legends
 mkdir -p images/h/leg
 mkdir -p images/l/leg
 
-cp images/transparent.png images/h/leg/0.png
-cp images/transparent.png images/l/leg/0.png
+cp images/transparent.png images/h/leg/0-0.png
+cp images/transparent.png images/h/leg/0-1.png
+cp images/transparent.png images/l/leg/0-0.png
+cp images/transparent.png images/l/leg/0-1.png
