@@ -58,6 +58,10 @@ Included in this repository is a version of the [Leaflet](http://leafletjs.com) 
 Citations
 ---------
 
+This applet can be cited as:
+
+* Nelson EL, L'Ecuyer TS, Igel AL, and van den Heever SC (2019): An interactive online educational applet for multiple frequencies of radar observations. _Bulletin of the American Meteorological Society_, *100* (5), 747--752. http://doi.org/10.1175/BAMS-D-18-0249.1
+
 Model data were taken from a Regional Atmospheric Modeling System cloud allowing simulation:
 
 * Igel AL, van den Heever SC, Naud CM, Saleeby SM, and Posselt DJ (2013): Sensitivity of warm-frontal processes to cloud-nucleating aerosol concentrations. _Journal of the Atmospheric Sciences_, *70* (6), 1768--1783. http://doi.org/10.1175/JAS-D-12-0170.1.
